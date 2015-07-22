@@ -14,7 +14,9 @@ program
     .option('-p, --port <n>', 'Force app port (requires sudo on osx)', parseInt)
     .parse(process.argv);
 
-app.listen(program.port || DEFAULT_PORT);
+var port = program.port || process.env.PORT || DEFAULT_PORT;
+app.listen(port);
+console.log('Listening on port', port);
 
 // HTTP server for static files
 function handler(req, res) {
