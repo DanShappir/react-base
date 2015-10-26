@@ -4,13 +4,11 @@
 (function () {
     'use strict';
 
-    const root = document.getElementById('root');
+    const ROOT = document.getElementById('root');
 
-    class HelloWorld extends React.Component {
-        render() {
-            return <div>Hello world!</div>;
-        }
+    function HelloWorld() {
+        return <div>Hello world!</div>;
     }
 
-    React.render(<HelloWorld/>, root);
+    ReactDOM.render(<HelloWorld/>, ROOT);
 }());
