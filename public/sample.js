@@ -5,10 +5,6 @@
     'use strict';
 
     const ROOT = document.getElementById('root');
-
-    function HelloWorld() {
-        return <div>Hello world!</div>;
-    }
-
-    ReactDOM.render(<HelloWorld/>, ROOT);
+    const elem = React.createElement('div', null, 'Hello world!');
+    ReactDOM.render(elem, ROOT);
 }());
